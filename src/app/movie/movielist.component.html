@@ -1,0 +1,12 @@
+<app-search (onSearch)="search($event)"></app-search>
+<!-- "search($event)" = container component -->
+
+<!-- <app-results></app-results> -->
+
+<!-- {{ name }}  -->
+
+<div *ngFor="let post of redditPosts">
+    <p>Title: {{ post.data.title }}</p>
+    <p>Author: {{ post.data.author }}</p>
+    <img src="{{ post.data.thumbnail }}" alt="">
+</div>    
