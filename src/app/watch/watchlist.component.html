@@ -1,1 +1,19 @@
-<p>watchlist-page works!</p>
+<div class="topnav">
+        <nav> 
+          <a routerLink="/"><img src="/assets/movie_real_logo.png" width="140px" height="20px"></a>
+          
+          <a routerLink="/" routerLinkActive="active">Home</a>
+          
+          <a routerLink="/watchlist" routerLinkActive="active">Watch List</a>
+        </nav>
+        </div>
+
+
+        <p>watchlist-page works!</p>
+        
+        <h1>Favorites List</h1>
+        <ul>
+          <li *ngFor="let item of items | async">
+            <button class="btn" (click)="add(item.$value)">[add to list]</button><button class="btn" (click)="delete(item)">[x]</button><span>{{item.$value}}</span>
+          </li>
+        </ul>

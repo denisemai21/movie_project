@@ -1,0 +1,13 @@
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: linear-gradient(to right, #00C0FF , #0D4DFF)
+}
+
+h1 {
+    margin: 10px;
+}
+
+p {
+    margin: 10px;
+}

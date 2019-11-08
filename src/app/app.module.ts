@@ -25,7 +25,7 @@ const appRoutes: Routes = [
     AppComponent,
     SearchComponent,
     MovielistComponent,
-    WatchlistComponent,
+    WatchlistComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

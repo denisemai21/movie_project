@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-watch-list-pageWat',
+  selector: 'watch',
   templateUrl: './watchlist.component.html',
   styleUrls: ['./watchlist.component.css']
 })

@@ -1,6 +1,31 @@
-<app-search (onSearch)="search($event)"></app-search>
+<!-- Main Home Page -->
 
+<div class="topnav">
+        <nav> 
+          <a routerLink="/"><img src="/assets/movie_real_logo.png" width="140px" height="20px"></a>
+          
+          <a routerLink="/" routerLinkActive="active">Home</a>
+          
+          <a routerLink="/watchlist" routerLinkActive="active">Watch List</a>
+        </nav>
+          <!-- <div class="search-container">
+            <form action="/action_page.php">
+              <app-search (onSearch)="search($event)" name="search"></app-search>
+            </form>
+          </div> -->
+        </div>
+
+
+
+<div class="movieresults">
+<div class="search"><app-search (onSearch)="search($event)"></app-search>
+<!-- <input type="text" placeholder="genre">
+<input type="text" placeholder="year"> -->
+</div>
 <div *ngFor="let movie of movieResults">
-    <p>Title: {{ movie.title }}</p>
-    <p>Overview: {{ movie.overview }} </p>
-    <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" all=""></div>
+    <p class="title">Title: {{ movie.title }}</p>
+    <p class="overview">Overview: {{ movie.overview }}</p>
+    <p>Genre: {{ movie.genre }}</p>
+    <div class="imagePlacement"> <img class="movieImage" src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" all=""></div>
+    <button type ="button" class="add-button" (click)="addFave()">Favorites</button>
+</div>

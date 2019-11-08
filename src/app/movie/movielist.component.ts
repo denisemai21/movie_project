@@ -9,8 +9,20 @@ import { SearchService } from '../search/search.service';
 export class MovielistComponent implements OnInit {
 
   movieResults: any[] = [];
+  newFave: string;
+  faves: any[] =[];
   
   constructor(private searchService: SearchService) { }
+  
+  // took from to do list
+  addFave() {
+    const newItem = {
+      faves: this.newFave,
+      completed: false
+    }
+    this.faves.push(newItem);
+    this.newFave = null;
+  }
 
   search(subName: string): void { 
     console.log(subName);
@@ -23,8 +35,12 @@ export class MovielistComponent implements OnInit {
     }, error => {
       console.log(`oh no. ${error}`);
     }); 
+
+        // .fetchGenre(subGenre)
+    // .fetchYear(subYear)
   }
  
+  
   ngOnInit() {
   }
 
