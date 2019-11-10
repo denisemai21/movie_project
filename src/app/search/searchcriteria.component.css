@@ -1,0 +1,12 @@
+input {
+    width: 27%;
+    padding: 5px;
+    margin: 5px;
+}
+
+button {
+    background-color: lightblue;
+    border: none;
+    padding: 7px;
+    margin: 5px 5px 0px;
+}

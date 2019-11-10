@@ -8,11 +8,14 @@ import { SearchService } from '../search/search.service';
 })
 export class MovielistComponent implements OnInit {
 
+  popularList: any[] = [];
   movieResults: any[] = [];
   newFave: string;
   faves: any[] =[];
   
-  constructor(private searchService: SearchService) { }
+  constructor(private searchService: SearchService) {this.searchService.fetchPopular().subscribe((res: any) =>{
+    this.popularList = res.results;
+});}
   
   // took from to do list
   addFave() {
@@ -36,8 +39,7 @@ export class MovielistComponent implements OnInit {
       console.log(`oh no. ${error}`);
     }); 
 
-        // .fetchGenre(subGenre)
-    // .fetchYear(subYear)
+    
   }
  
   

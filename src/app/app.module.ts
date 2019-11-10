@@ -13,7 +13,6 @@ import { SearchService } from './search/search.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
-import { DragDropModule } from '@angular/cdk/drag-drop';
 
 const appRoutes: Routes = [
   { path: '', component: MovielistComponent },
@@ -33,8 +32,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSliderModule,
-    DragDropModule
+    MatSliderModule
   ],
   providers: [
     SearchService

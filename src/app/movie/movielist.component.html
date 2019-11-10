@@ -14,18 +14,29 @@
             </form>
           </div> -->
         </div>
-
-
-
+        
 <div class="movieresults">
 <div class="search"><app-search (onSearch)="search($event)"></app-search>
 <!-- <input type="text" placeholder="genre">
 <input type="text" placeholder="year"> -->
+
 </div>
-<div *ngFor="let movie of movieResults">
+
+<!-- our code -->
+<div *ngFor="let movie of popularList" style="display: inline-block">
+  
     <p class="title">Title: {{ movie.title }}</p>
-    <p class="overview">Overview: {{ movie.overview }}</p>
+    
+    <img class="movieImage" src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" all=""></div>
+</div>
+
+<div *ngFor="let movie of movieResults">
+    <h4>Title: {{ movie.title }}</h4>
+    <p class="overview">Release Date : {{ movie.release_date}}</p>
     <p>Genre: {{ movie.genre }}</p>
     <div class="imagePlacement"> <img class="movieImage" src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" all=""></div>
+    <!-- <p><a class="btn btn-default" routerLink="/movie/{{movie.id}}" role="button">View details &raquo;</a></p> -->
     <button type ="button" class="add-button" (click)="addFave()">Favorites</button>
 </div>
+           
+          
