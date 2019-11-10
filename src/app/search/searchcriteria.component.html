@@ -1,7 +1,12 @@
+
 <form #form="ngForm"(ngSubmit) ="handleSubmit(form)">
     <input type="text" placeholder="search" ngModel name="subName">
     <!-- <input type="text" placeholder="genre" ngModel name="subGenre">
 <input type="text" placeholder="year" ngModel name="subYear"> -->
-    <button>Search</button>
+<select name="movieTypes">
+        <option value="Title">Title</option>
+        <option value="Genre">Genre</option>
+        <option value="Release Date">Release Date</option>
+      </select>
+    <button type="submit">Search</button>
     </form>
-    

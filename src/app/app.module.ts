@@ -8,15 +8,19 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/searchcriteria.component';
 import { MovielistComponent } from './movie/movielist.component';
 import { WatchlistComponent } from './watch/watchlist.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
+// import { GenresComponent } from './genres/genres.component';
+
 
 import { SearchService } from './search/search.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { MatSliderModule } from '@angular/material/slider';
+import { NavigationComponent } from './navigation/navigation.component';
 
 const appRoutes: Routes = [
   { path: '', component: MovielistComponent },
-  { path: 'watchlist', component: WatchlistComponent }
+  { path: 'watchlist', component: WatchlistComponent },
+  { path: 'movie/:id', component: MovieCardComponent },
+  // { path: 'genres/:id/:name', component: GenresComponent}
 ]
 
 @NgModule({
@@ -24,15 +28,16 @@ const appRoutes: Routes = [
     AppComponent,
     SearchComponent,
     MovielistComponent,
-    WatchlistComponent
+    WatchlistComponent,
+    MovieCardComponent,
+    NavigationComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,
-    MatSliderModule
+    BrowserAnimationsModule
   ],
   providers: [
     SearchService

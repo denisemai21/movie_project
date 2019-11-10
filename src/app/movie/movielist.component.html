@@ -1,42 +1,30 @@
 <!-- Main Home Page -->
 
-<div class="topnav">
-        <nav> 
-          <a routerLink="/"><img src="/assets/movie_real_logo.png" width="140px" height="20px"></a>
-          
-          <a routerLink="/" routerLinkActive="active">Home</a>
-          
-          <a routerLink="/watchlist" routerLinkActive="active">Watch List</a>
-        </nav>
-          <!-- <div class="search-container">
-            <form action="/action_page.php">
-              <app-search (onSearch)="search($event)" name="search"></app-search>
-            </form>
-          </div> -->
-        </div>
+<app-navigation></app-navigation>
         
 <div class="movieresults">
 <div class="search"><app-search (onSearch)="search($event)"></app-search>
 <!-- <input type="text" placeholder="genre">
 <input type="text" placeholder="year"> -->
-
+<h1>Popular Movies:</h1>
 </div>
 
 <!-- our code -->
+
 <div *ngFor="let movie of popularList" style="display: inline-block">
-  
-    <p class="title">Title: {{ movie.title }}</p>
-    
-    <img class="movieImage" src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" all=""></div>
+    <!-- <p class="title">Title: {{ movie.title }}</p> -->
+    <a routerLink="/movie/{{ movie.id }}" role="button">
+    <img class="movieImage" src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" all=""></a></div>
 </div>
 
+<div class="searchResults">
 <div *ngFor="let movie of movieResults">
     <h4>Title: {{ movie.title }}</h4>
     <p class="overview">Release Date : {{ movie.release_date}}</p>
-    <p>Genre: {{ movie.genre }}</p>
+    <p>Genre: {{ movie.genre_ids }}</p>
     <div class="imagePlacement"> <img class="movieImage" src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" all=""></div>
     <!-- <p><a class="btn btn-default" routerLink="/movie/{{movie.id}}" role="button">View details &raquo;</a></p> -->
     <button type ="button" class="add-button" (click)="addFave()">Favorites</button>
 </div>
-           
+</div>
           
