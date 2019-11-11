@@ -1,12 +1,10 @@
-
 <form #form="ngForm"(ngSubmit) ="handleSubmit(form)">
-    <input type="text" placeholder="search" ngModel name="subName">
-    <!-- <input type="text" placeholder="genre" ngModel name="subGenre">
-<input type="text" placeholder="year" ngModel name="subYear"> -->
-<select name="movieTypes">
-        <option value="Title">Title</option>
-        <option value="Genre">Genre</option>
-        <option value="Release Date">Release Date</option>
-      </select>
-    <button type="submit">Search</button>
-    </form>
+  <input type="text" placeholder="Search By Name" ngModel name="subName">
+  <!-- <input type="number" placeholder="Search By Year" ngModel name="subYear"> -->
+  <!-- <select ngModel name="searchCriteria">
+      <option value="">Search By</option>
+      <option *ngFor="let criteria of searchCriteria" [value]="criteria.value">{{criteria.name}}</option>
+    </select> -->
+  <button>Search</button>
+  </form>
+  

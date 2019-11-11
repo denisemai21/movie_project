@@ -17,14 +17,12 @@
     <img class="movieImage" src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" all=""></a></div>
 </div>
 
-<div class="searchResults">
 <div *ngFor="let movie of movieResults">
     <h4>Title: {{ movie.title }}</h4>
     <p class="overview">Release Date : {{ movie.release_date}}</p>
     <p>Genre: {{ movie.genre_ids }}</p>
     <div class="imagePlacement"> <img class="movieImage" src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" all=""></div>
     <!-- <p><a class="btn btn-default" routerLink="/movie/{{movie.id}}" role="button">View details &raquo;</a></p> -->
-    <button type ="button" class="add-button" (click)="addFave()">Favorites</button>
-</div>
+    <button (click)="addToWatchlist(movie.title)">Add to WatchList</button>
 </div>
           

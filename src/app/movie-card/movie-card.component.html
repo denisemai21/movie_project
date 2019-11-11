@@ -1,16 +1,5 @@
 <app-navigation></app-navigation>
 
-<div class="thumbnail">
-        <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" *ngIf="movie.poster_path">
-        <img src="assets/img/abstract-image.jpg" *ngIf="!movie.poster_path">
-        <div class="caption">
-          <h4 class="text-ellipsis">
-            <a routerLink="/movie/{{movie.id}}" title="{{movie.title}}">{{movie.title}}</a>
-          </h4>
-          <p>Release Date : {{ movie.release_date}}</p>
-          <p>
-            <a href="">View details &raquo;</a>
-
-          </p>
-        </div>
-      </div>
+          <a routerLink="/movie/{{movie.id }" title="{{movie.title}}">{{movie.title}}</a>
+          <p>Release Date : {{ movie.release_date }} </p>
+          <a href="/movie/{{ movie.details }}">View details &raquo;</a>

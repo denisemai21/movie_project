@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 // import { SearchService } from '../search/search.service';
 // import { RouterModule } from '@angular/router';
 

@@ -1,3 +1,10 @@
 <app-navigation></app-navigation>
-        <div class="watchList">  <h3>Favorites List</h3>
-        Running list of movies to watch. </div>
+
+
+<div class="box" *ngFor="let movie of movies; let i = index">
+  <div class="favlist">
+   {{ movie.title }}
+   <!-- <img class="movieImage" src="https://image.tmdb.org/t/p/w200/{{ movie.poster_path }}" all=""> -->
+  </div> 
+   <span class="close" (click)='deleteWatchListItem(i)'>&times;</span>
+ </div>
